@@ -12,20 +12,18 @@
 |------|-------------|--------|
 | `strspc` | CLI for SteerSpec: render, validate and manage behavioral rule files | [strspc-CLI](https://github.com/SteerSpec/strspc-CLI) |
 
-> The `strspc` cask is being added; it appears here after the first CLI release publishes to this tap.
-
 ## Install
 
 ```bash
-brew install --cask SteerSpec/tap/strspc
-```
-
-Or tap first, then install by name:
-
-```bash
 brew tap SteerSpec/tap
+brew trust --cask steerspec/tap/strspc
 brew install --cask strspc
 ```
+
+Recent Homebrew versions refuse to load casks from untrusted taps
+(`Refusing to load cask steerspec/tap/strspc from untrusted tap`), so the `brew trust` step is
+required once. It trusts only the `strspc` cask; `brew trust steerspec/tap` trusts the whole tap,
+including future casks. See [Tap Trust](https://docs.brew.sh/Tap-Trust).
 
 Upgrade and uninstall:
 
@@ -38,8 +36,11 @@ brew uninstall --cask strspc
 
 - **macOS only.** On Linux, download the tarball from the
   [strspc-CLI releases](https://github.com/SteerSpec/strspc-CLI/releases).
-- **Unsigned binaries.** The cask clears the macOS quarantine flag on install so Gatekeeper
-  does not block `strspc`.
+- **Unsigned binaries.** `strspc` is not code-signed. If macOS reports it as damaged or blocks it, run:
+
+  ```bash
+  xattr -dr com.apple.quarantine "$(brew --prefix)/bin/strspc"
+  ```
 
 ## How it is maintained
 
