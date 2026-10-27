@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: strspc CLI bug or feature request
+    url: https://github.com/SteerSpec/strspc-CLI/issues
+    about: Problems with the strspc CLI itself belong in the CLI repository.
+  - name: Report a security vulnerability
+    url: https://github.com/SteerSpec/homebrew-tap/security/advisories/new
+    about: Report vulnerabilities privately; do not open a public issue.
