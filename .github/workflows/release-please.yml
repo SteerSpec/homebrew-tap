@@ -27,7 +27,7 @@ jobs:
           permission-contents: write
           permission-pull-requests: write
 
-      - uses: googleapis/release-please-action@v4
+      - uses: googleapis/release-please-action@5c625bfb5d1ff62eadeeb3772007f7f66fdcf071  # v4.4.1
         with:
           # Not GITHUB_TOKEN: its tag pushes would not trigger the GoReleaser
           # workflow and its PRs get no CI. Not a PAT either: PAT commits are unsigned.
