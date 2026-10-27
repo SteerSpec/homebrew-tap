@@ -9,7 +9,7 @@ body:
       description: Include the command you ran and its full output.
     validations:
       required: true
-  - type: input
+  - type: textarea
     id: brew
     attributes:
       label: Homebrew and macOS versions
