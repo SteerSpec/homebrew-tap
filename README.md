@@ -1,3 +1,5 @@
+<img src="https://steerspec.dev/assets/logo.svg" alt="SteerSpec logo" width="96" height="96">
+
 # homebrew-tap
 
 [![CI](https://github.com/SteerSpec/homebrew-tap/actions/workflows/commitlint.yml/badge.svg)](https://github.com/SteerSpec/homebrew-tap/actions/workflows/commitlint.yml)
