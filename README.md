@@ -5,7 +5,7 @@
 [![Release](https://img.shields.io/github/v/release/SteerSpec/homebrew-tap)](https://github.com/SteerSpec/homebrew-tap/releases)
 [![Conventional Commits](https://img.shields.io/badge/Conventional_Commits-1.0.0-yellow.svg)](https://www.conventionalcommits.org)
 
-[Homebrew](https://brew.sh) tap for [SteerSpec](https://steerspec.dev) tools, for engineers who install the `strspc` CLI on macOS.
+[Homebrew](https://brew.sh) tap for [SteerSpec](https://steerspec.dev) tools, for engineers who install the `strspc` CLI on macOS or Linux.
 
 The `strspc` cask pins a release version and a SHA-256 checksum per architecture, and downloads the
 tarball from a tagged [strspc-CLI release](https://github.com/SteerSpec/strspc-CLI/releases). See
@@ -35,7 +35,8 @@ brew uninstall --cask strspc
 
 ### Notes
 
-- **macOS only.** On Linux or Windows, download the archive from the
+- **macOS and Linux.** The cask installs `strspc` on both, for arm64 and amd64. Homebrew does not
+  support Windows; download the `windows_amd64` or `windows_arm64` zip from the
   [strspc-CLI releases](https://github.com/SteerSpec/strspc-CLI/releases).
 - **Unsigned binaries.** `strspc` is not code-signed. If macOS reports it as damaged or blocks it, run:
 
@@ -55,7 +56,7 @@ brew uninstall --cask strspc
 |-----------|-------|
 | Install `strspc` with Homebrew | [Install](#install) |
 | Learn what `strspc` does and how to use it | [strspc-CLI README](https://github.com/SteerSpec/strspc-CLI#readme) |
-| Download `strspc` for Linux or Windows | [strspc-CLI releases](https://github.com/SteerSpec/strspc-CLI/releases) |
+| Download `strspc` for Windows | [strspc-CLI releases](https://github.com/SteerSpec/strspc-CLI/releases) |
 | Change the cask | [How it is maintained](#how-it-is-maintained) |
 | Contribute to the tap | [CONTRIBUTING.md](CONTRIBUTING.md) |
 | Report a vulnerability | [Security](#security) |
