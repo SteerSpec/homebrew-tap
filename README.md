@@ -10,8 +10,8 @@
 The `strspc` cask pins a release version and a SHA-256 checksum per architecture, and downloads the
 tarball from a tagged [strspc-CLI release](https://github.com/SteerSpec/strspc-CLI/releases). See
 [the cask at commit `e1f1541`](https://github.com/SteerSpec/homebrew-tap/blob/e1f1541d6753c42fd44ed2ed03386d93c63777bb/Casks/strspc.rb),
-which pins `strspc` v1.36.0 as of that commit. The binaries are not code-signed, so macOS may
-block them on first run; the fix is under [Notes](#notes).
+which pins `strspc` v1.36.0 as of that commit. The macOS binaries are notarized; the Linux and
+Windows binaries are not. See [Notes](#notes).
 
 ## Install
 
@@ -38,11 +38,8 @@ brew uninstall --cask strspc
 - **macOS and Linux.** The cask installs `strspc` on both, for arm64 and amd64. Homebrew does not
   support Windows; download the `windows_amd64` or `windows_arm64` zip from the
   [strspc-CLI releases](https://github.com/SteerSpec/strspc-CLI/releases).
-- **Unsigned binaries.** `strspc` is not code-signed. If macOS reports it as damaged or blocks it, run:
-
-  ```bash
-  xattr -dr com.apple.quarantine "$(brew --prefix)/bin/strspc"
-  ```
+- **Notarization.** Only the macOS binaries are notarized. The Linux and Windows binaries are not
+  signed or notarized.
 
 ## Available casks
 
