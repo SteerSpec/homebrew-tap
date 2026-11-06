@@ -7,13 +7,14 @@
 [![Release](https://img.shields.io/github/v/release/SteerSpec/homebrew-tap)](https://github.com/SteerSpec/homebrew-tap/releases)
 [![Conventional Commits](https://img.shields.io/badge/Conventional_Commits-1.0.0-yellow.svg)](https://www.conventionalcommits.org)
 
-[Homebrew](https://brew.sh) tap for [SteerSpec](https://steerspec.dev) tools, for engineers who install the `strspc` CLI on macOS or Linux.
+This is the [Homebrew](https://brew.sh) tap for [SteerSpec](https://steerspec.dev) tools, for engineers who install the `strspc` CLI on macOS or Linux.
+It holds one cask, `strspc`, the CLI for SteerSpec to render, validate and manage behavioral rule files
+(source: [strspc-CLI](https://github.com/SteerSpec/strspc-CLI)).
 
 The `strspc` cask pins a release version and a SHA-256 checksum per architecture, and downloads the
 tarball from a tagged [strspc-CLI release](https://github.com/SteerSpec/strspc-CLI/releases). See
 [the cask at commit `e1f1541`](https://github.com/SteerSpec/homebrew-tap/blob/e1f1541d6753c42fd44ed2ed03386d93c63777bb/Casks/strspc.rb),
-which pins `strspc` v1.36.0 as of that commit. The macOS binaries are notarized; the Linux and
-Windows binaries are not. See [Notes](#notes).
+which pins `strspc` v1.36.0 as of that commit.
 
 ## Install
 
@@ -43,12 +44,6 @@ brew uninstall --cask strspc
 - **Notarization.** Only the macOS binaries are notarized. The Linux and Windows binaries are not
   signed or notarized.
 
-## Available casks
-
-| Cask | Description | Source |
-|------|-------------|--------|
-| `strspc` | CLI for SteerSpec: render, validate and manage behavioral rule files | [strspc-CLI](https://github.com/SteerSpec/strspc-CLI) |
-
 ## Where to go
 
 | I want to | Go to |
@@ -56,7 +51,7 @@ brew uninstall --cask strspc
 | Install `strspc` with Homebrew | [Install](#install) |
 | Learn what `strspc` does and how to use it | [strspc-CLI README](https://github.com/SteerSpec/strspc-CLI#readme) |
 | Download `strspc` for Windows | [strspc-CLI releases](https://github.com/SteerSpec/strspc-CLI/releases) |
-| Change the cask | [How it is maintained](#how-it-is-maintained) |
+| Change the cask | [Governance: how it is maintained](#how-it-is-maintained) |
 | Contribute to the tap | [CONTRIBUTING.md](CONTRIBUTING.md) |
 | Report a vulnerability | [Security](#security) |
 
