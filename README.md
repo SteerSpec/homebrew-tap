@@ -13,8 +13,8 @@ It holds one cask, `strspc`, the CLI for SteerSpec to render, validate and manag
 
 The `strspc` cask pins a release version and a SHA-256 checksum per architecture, and downloads the
 tarball from a tagged [strspc-CLI release](https://github.com/SteerSpec/strspc-CLI/releases). See
-[the cask at commit `e1f1541`](https://github.com/SteerSpec/homebrew-tap/blob/e1f1541d6753c42fd44ed2ed03386d93c63777bb/Casks/strspc.rb),
-which pins `strspc` v1.36.0 as of that commit.
+[the cask at commit `e1f1541`](https://github.com/SteerSpec/homebrew-tap/blob/e1f1541d6753c42fd44ed2ed03386d93c63777bb/Casks/strspc.rb)
+for an example; the release badge above shows the current tap release.
 
 ## Install
 
